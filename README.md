@@ -30,7 +30,6 @@ This project is a **basic blogging platform** built using **NestJS microservices
 - **MySQL** — Relational database
 - **TypeORM** — ORM for managing DB operations
 - **Swagger** — API documentation (`@nestjs/swagger`)
-- **Docker** (Optional) — Containerization support
 - **Postman** — API testing
 - **ValidationPipe** — Request data validation using `class-validator`
 
