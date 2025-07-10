@@ -1,3 +1,4 @@
+
 # Blogging_Service
 
 <p align="center">
@@ -29,7 +30,6 @@ This project is a **basic blogging platform** built using **NestJS microservices
 - **NestJS** — Modular Node.js framework
 - **MySQL** — Relational database
 - **TypeORM** — ORM for managing DB operations
-- **Swagger** — API documentation (`@nestjs/swagger`)
 - **Postman** — API testing
 - **ValidationPipe** — Request data validation using `class-validator`
 
@@ -38,26 +38,63 @@ This project is a **basic blogging platform** built using **NestJS microservices
 ## 📁 Microservice Folder Structure
 
 ```
-blogging-platform/
-│
-├── user-service/
-│   ├── src/
-│   │   ├── user/               # User module: controller, service, entity, DTOs
-│   │   ├── app.module.ts
-│   │   └── main.ts
-│   ├── .env
-│   └── package.json
+blog-services/
 │
 ├── post-service/
+│   ├── dist/
+│   ├── node_modules/
 │   ├── src/
-│   │   ├── post/               # Post module: controller, service, entity, DTOs
-│   │   ├── app.module.ts
-│   │   └── main.ts
+│   │   └── post/
+│   │       ├── controllers/
+│   │       │   ├── post.controller.spec.ts
+│   │       │   └── post.controller.ts
+│   │       ├── dtos/
+│   │       │   └── create-post.dto.ts
+│   │       ├── entity/
+│   │       │   └── post.entity.ts
+│   │       ├── services/
+│   │       │   ├── post.service.spec.ts
+│   │       │   └── post.service.ts
+│   │       └── post.module.ts
+│   ├── app.module.ts
+│   ├── main.ts
+│   ├── test/
 │   ├── .env
-│   └── package.json
+│   ├── .gitignore
+│   ├── .prettierrc
+│   ├── eslint.config.mjs
+│   ├── nest-cli.json
+│   ├── package-lock.json
+│   ├── package.json
+│   └── README.md
 │
-├       # (Optional) MySQL + Services orchestration
-└── README.md
+├── user-service/
+│   ├── dist/
+│   ├── node_modules/
+│   ├── src/
+│   │   └── user/
+│   │       ├── controllers/
+│   │       │   ├── user.controller.spec.ts
+│   │       │   └── user.controller.ts
+│   │       ├── dtos/
+│   │       │   └── create-user.dto.ts
+│   │       ├── entity/
+│   │       │   └── user.entity.ts
+│   │       ├── services/
+│   │       │   ├── user.service.spec.ts
+│   │       │   └── user.service.ts
+│   │       └── user.module.ts
+│   ├── app.module.ts
+│   ├── main.ts
+│   ├── test/
+│   ├── .env
+│   ├── .gitignore
+│   ├── .prettierrc
+│   ├── eslint.config.mjs
+│   ├── nest-cli.json
+│   ├── package-lock.json
+│   ├── package.json
+│   └── README.md
 ```
 
 ---
